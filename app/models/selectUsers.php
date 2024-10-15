@@ -1,16 +1,16 @@
 <?php
 
-namespace Models;
+namespace App\models;
 
 use PDO;
 
-class User
+class Users
 {
   private $pdo;
 
   public function __construct($pdo)
   {
-    $this->pdo = $pdo;
+   return $this->pdo = $pdo;
   }
 
   // Função para buscar todos os usuários

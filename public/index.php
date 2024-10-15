@@ -1,18 +1,16 @@
 <?php
 
 require __DIR__ . '../../vendor/autoload.php';
-require __DIR__ . '../../core/Router.php';
-require __DIR__ . '../../app/controllers/HomeController.php';
-require __DIR__ . '../../app/controllers/ProdutosController.php';
 
 
-use Core\Router;
-use Controllers\HomeController;
-use Controllers\ProdutosController;
+
+use App\core\Routers;
+use App\controllers\HomeController;
+use App\controllers\ProdutosController;
 
 
 // Instanciando o roteador
-$router = new Router();
+$router = new Routers();
 
 // Definindo as rotas
 $router->add('GET', '/', [HomeController::class, 'index']);
