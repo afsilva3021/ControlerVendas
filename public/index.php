@@ -3,17 +3,18 @@
 require __DIR__ . '../../vendor/autoload.php';
 
 
-
-use App\core\Routers;
+use App\core\Router;
+use App\controllers\UserController;
 use App\controllers\HomeController;
 use App\controllers\ProdutosController;
 
 
 // Instanciando o roteador
-$router = new Routers();
+$router = new Router();
 
 // Definindo as rotas
 $router->add('GET', '/', [HomeController::class, 'index']);
+$router->add('GET', '/myprofile', [UserController::class, 'myProfile']);
 $router->add('GET', '/catalogo', [ProdutosController::class, 'catalogo']);
 $router->add('GET', '/cadastro', [ProdutosController::class, 'cadastro']);
 
