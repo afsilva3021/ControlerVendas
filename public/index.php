@@ -3,20 +3,20 @@
 require __DIR__ . '../../vendor/autoload.php';
 
 
-use App\core\Router;
+use App\core\Routers;
 use App\controllers\UserController;
 use App\controllers\HomeController;
-use App\controllers\ProdutosController;
+use App\controllers\CadastroController;
 
 
 // Instanciando o roteador
-$router = new Router();
+$router = new Routers();
 
 // Definindo as rotas
 $router->add('GET', '/', [HomeController::class, 'index']);
 $router->add('GET', '/myprofile', [UserController::class, 'myProfile']);
-$router->add('GET', '/catalogo', [ProdutosController::class, 'catalogo']);
-$router->add('GET', '/cadastro', [ProdutosController::class, 'cadastro']);
+$router->add('GET', '/produtos', [CadastroController::class, 'produtos']);
+$router->add('GET', '/cliente', [CadastroController::class, 'cliente']);
 
 
 // Recuperando a URL atual
