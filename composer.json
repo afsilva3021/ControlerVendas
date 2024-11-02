@@ -2,7 +2,8 @@
     "name": "2091/controle-stoque",
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Core\\": "core/"
         }
     },
 

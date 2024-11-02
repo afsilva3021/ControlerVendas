@@ -1,6 +1,6 @@
 <?php
 
-namespace App\core;
+namespace Core;
 
 class Routers
 {
@@ -9,17 +9,17 @@ class Routers
 	public function add($method, $path, $handler)
 	{
 		$this->routes[] = [
-			'method' => $method,
-			'path' => $path,
-			'handler' => $handler
+			"method" => $method,
+			"path" => $path,
+			"handler" => $handler
 		];
 	}
 
 	public function match($requestUri, $requestMethod)
 	{
 		foreach ($this->routes as $route) {
-			if ($route['path'] === $requestUri && $route['method'] === $requestMethod) {
-				return $route['handler'];
+			if ($route["path"] === $requestUri && $route["method"] === $requestMethod) {
+				return $route["handler"];
 			}
 		}
 		return null;

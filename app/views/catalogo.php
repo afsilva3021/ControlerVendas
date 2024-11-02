@@ -1,4 +1,4 @@
-<?php require __DIR__ . '/layout/body.php'; ?>
+<?php require __DIR__ . "/layout/body.php"; ?>
 <main id="main" class="main">
 
   <div class="pagetitle">
@@ -93,4 +93,4 @@
 
 </main><!-- End #main -->
 
-<?php require __DIR__ . '/layout/footer.php' ?>
+<?php require __DIR__ . "/layout/footer.php" ?>

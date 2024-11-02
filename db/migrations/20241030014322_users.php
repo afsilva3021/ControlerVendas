@@ -11,12 +11,12 @@ final class Users extends AbstractMigration
   
     public function change(): void
     {
-        $table = $this->table('Users');
-        $table->addColumn('name', 'string')
-              ->addColumn('email', 'string')
-              ->addColumn('password', 'string')
-              ->addColumn('created', 'datetime')
-              ->addColumn('modified', 'datetime')
+        $table = $this->table("Users");
+        $table->addColumn("name", "string")
+              ->addColumn("email", "string")
+              ->addColumn("password", "string")
+              ->addColumn("created", "datetime")
+              ->addColumn("modified", "datetime")
               ->create();
     }
 }

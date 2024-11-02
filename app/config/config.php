@@ -10,16 +10,16 @@ class Config
 {
 	public function conectar() // Corrigido o nome do método
 	{
-		$dotenv = Dotenv::createImmutable(__DIR__ . '/../../'); // Corrigido o caminho para carregar o .env
+		$dotenv = Dotenv::createImmutable(__DIR__ . "/../../"); // Corrigido o caminho para carregar o .env
 		$dotenv->load();
 
 		try {
 			// Mudado $_ENV para getenv para acessar variáveis de ambiente
-			$dbHost = getenv('DB_HOST');
-			$dbPort = getenv('DB_PORT');
-			$dbName = getenv('DB_DATABASE');
-			$dbUser = getenv('DB_USERNAME');
-			$dbPass = getenv('DB_PASSWORD');
+			$dbHost = getenv("DB_HOST");
+			$dbPort = getenv("DB_PORT");
+			$dbName = getenv("DB_DATABASE");
+			$dbUser = getenv("DB_USERNAME");
+			$dbPass = getenv("DB_PASSWORD");
 
 			$dsn = "mysql:host=$dbHost;port=$dbPort;dbname=$dbName;charset=utf8mb4";
 			$pdo = new PDO($dsn, $dbUser, $dbPass);
