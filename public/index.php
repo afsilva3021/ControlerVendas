@@ -3,7 +3,7 @@
 require __DIR__ . "../../vendor/autoload.php";
 
 
-use Core\Routers;
+use App\Core\Routers;
 use App\controllers\UserController;
 use App\controllers\HomeController;
 use App\controllers\CadastroController;
